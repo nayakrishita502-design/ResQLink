@@ -1,0 +1,119 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>ResQLink</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>🚨 ResQLink</h1>
+<p>Emergency Response System</p>
+
+<button onclick="sendSOS()">SOS</button>
+<button onclick="window.location.href='map.html'">View Nearby Help</button>
+
+<p id="status"></p>
+
+<script src="script.js"></script>
+
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>ResQLink</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1 class="title">🚨 ResQLink</h1>
+    <p class="subtitle">Help when it matters most</p>
+
+    <button class="sos-btn" onclick="sendSOS()">SOS</button>
+
+    <p id="status" class="status"></p>
+
+    <div class="options">
+    <button onclick="goToMap()">Nearby Help</button>
+    <button>Emergency Contacts</button>
+    <audio id="alertSound" src="https://www.soundjay.com/button/beep-07.wav"></audio>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ResQLink</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- SCREEN 1: Welcome -->
+<div class="screen active" id="welcome">
+    <h1>ResQLink 🚨</h1>
+    <p>"Help when it matters most"</p>
+    <button onclick="goTo('home')">Get Started</button>
+</div>
+
+<!-- SCREEN 2: Home -->
+<div class="screen" id="home">
+    <h2>Hello, User 👋</h2>
+    <p>📍 Current Location</p>
+
+    <div class="sos" onclick="goTo('emergency')">SOS</div>
+
+    <div class="row">
+    <button class="secondary">Nearby Help</button>
+    <button class="secondary">Emergency Contacts</button>
+    </div>
+</div>
+
+<!-- SCREEN 3: Emergency -->
+<div class="screen" id="emergency">
+    <h2 class="red">⚠️ Emergency Activated</h2>
+    <p>📍 Location Shared</p>
+    <p>👥 Contacts Notified</p>
+
+    <button onclick="goTo('map')">View Status</button>
+</div>
+
+<!-- SCREEN 4: Map -->
+<div class="screen" id="map">
+    <h2>Nearby Help</h2>
+
+    <div class="map-box">🗺️ Map View</div>
+
+    <p>📍 You</p>
+    <p>🏥 Hospital – 2 km</p>
+    <p>🚓 Police – 1.5 km</p>
+    <p>👤 Volunteer – 1 km</p>
+
+    <button onclick="goTo('confirmation')">Track Status</button>
+</div>
+
+<!-- SCREEN 5: Confirmation -->
+<div class="screen" id="confirmation">
+    <h2 class="green">✅ Help is on the way!</h2>
+
+    <p>🚑 Ambulance assigned</p>
+    <p>⏱️ ETA: 5 minutes</p>
+    <p>📞 Stay reachable</p>
+
+    <button class="green-btn">Stay Connected</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
